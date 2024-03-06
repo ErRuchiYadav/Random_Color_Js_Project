@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 900px;
+            font-size: 62px;
+            margin:100px auto;
+        }
+        .a{
+            height: 300px;
+            width: 300px;
+            float: left;
+            font-size: 55px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 300px;
+            text-shadow: 10px 10px 15px 100px black;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="a" id="a">Ruchi</div>
+        <div class="a" id="a1">*</div>
+        <div class="a" id="a2">Yadav</div>
+    </div>
+    <script>
+        var str = "0123456789ABCDEFabcdef"
+        //var rindex = Math.floor(Math.random()*str.length); 
+        
+        function demo(){
+            var color = "#";
+            for(var i=0;i<=5;i++){
+                var rindex = Math.floor(Math.random()*str.length); 
+                color=color+str.charAt(rindex)
+            }
+            var d=document.querySelector("#a");
+            d.style.backgroundColor=color;
+            //alert(color)
+            color="#";
+            //alert(color)
+            for(var i=0;i<=5;i++){
+                var rindex = Math.floor(Math.random()*str.length); 
+                color=color+str.charAt(rindex)
+            }
+           // alert(color)
+            d.style.color=color;
+
+        }
+       
+        function demo1(){
+            var color1 = "#";
+            for(var i=0;i<=5;i++){
+                var rindex = Math.floor(Math.random()*str.length); 
+                color1=color1+str.charAt(rindex)
+             }
+        var di = document.querySelector("#a1");
+        di.style.background=color1;
+         color1 = "#";
+            for(var i=0;i<=5;i++){
+                var rindex = Math.floor(Math.random()*str.length); 
+                color1=color1+str.charAt(rindex)
+             }
+            di.style.color=color1
+        }
+ 
+        function demo2(){
+            var color2 = "#";
+            for(var i=0;i<=5;i++){
+                var rindex = Math.floor(Math.random()*str.length); 
+                color2=color2+str.charAt(rindex)
+
+            }
+            var d3 = document.querySelector("#a2");
+            d3.style.background=color2;
+            color2 = "#";
+            for(var i=0;i<=5;i++){
+                var rindex = Math.floor(Math.random()*str.length); 
+                color2=color2+str.charAt(rindex)
+
+            }
+            d3.style.color=color2;
+            }
+         setInterval(demo,500);
+         setInterval(demo1,500);
+         setInterval(demo2,500)
+    </script>
+</body>
+</html>
